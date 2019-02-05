@@ -1,43 +1,45 @@
 @import "vars"
-@import "fonts"
-@import "libs"
+
+*
+  margin: 0
+  padding: 0
 
 ::placeholder
-	color: #666
+  color: #666
 
 ::selection
-	background-color: $accent
-	color: #fff
+  background-color: $accent
+  color: #fff
 
 body
-	font-size: 16px
-	min-width: 320px
-	position: relative
-	line-height: 1.65
-	font-family: $default-font
-	overflow-x: hidden
-	color: $text
-	input, textarea
-		border: #666 1px solid
-		outline: none
-		&:focus:required:invalid
-			border-color: red
-		&:required:valid
-			border-color: green
+  font-size: 16px
+  min-width: 320px
+  position: relative
+  line-height: 1.65
+  font-family: $default-font
+  overflow-x: hidden
+  color: $text
+  input, textarea
+    border: #666 1px solid
+    outline: none
+    &:focus:required:invalid
+      border-color: red
+    &:required:valid
+      border-color: green
 
-.img-responsive
-	display: block
-	max-width: 100%
-	height: auto
-	&.img-width
-		width: 100%
-
-.text-center
-	text-align: center
+.contain
+  &-window
+    box-sizing: border-box
+    height: 100vh
+  &-bg
+    height: inherit
+    &.home
+      background-image: url("../img/bg-home.jpg")
+    &.main
+      background-image: url("../img/bg-main.jpg")
 
 b, strong
-	font-weight: bold
+  font-weight: bold
 
 
 
-@import "media" // Always at the end
