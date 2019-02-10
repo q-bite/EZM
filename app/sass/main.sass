@@ -42,6 +42,8 @@ body
     min-height: 100vh
     position: relative
     background-color: #0a0603
+    &.home-window
+      height: 100vh
   &-bg
     height: inherit
     padding: 0 50px
@@ -99,6 +101,7 @@ ul
       font-size: 60px
       font-weight: bold
       line-height: 1
+      text-transform: uppercase
 
 .first-btn
   background: linear-gradient(to left, rgba(20,20,20, 0.38), transparent, rgba(20,20,20, 0.38))
@@ -378,3 +381,82 @@ form
       color: #fff
   &-map
     height: 530px
+
+.main-nav
+  display: none
+.nav-active
+  position: relative
+  &:before
+    content: ''
+    left: 0
+    right: 0
+    top: 0
+    bottom: 0
+    background-color: rgba(255, 201, 52, 0.81)
+    width: 100%
+    z-index: 1
+    height: inherit
+    position: absolute
+    background-size: cover
+    background-position: center
+  .main-nav
+    display: block
+  .top-line
+    position: relative
+    z-index: 3
+  .top-line-navbar ul span
+    background-color: #000000
+  .top-line-navbar ul
+    li:last-child
+      opacity: 0
+      visibility: hidden
+  .top-line + *
+    display: none
+  .s-e
+    display: none
+  .main-nav
+    position: absolute
+    top: 0
+    left: 0
+    z-index: 3
+    padding-top: 130px
+    ul
+      list-style-type: none
+      li
+        line-height: 1
+        margin-bottom: 25px
+        a
+          color: #000000
+          font-size: 90px
+          text-decoration: none
+          text-transform: uppercase
+          font-weight: bold
+          transition: 0.3s
+          &.active,
+          &:hover
+            color: #fff
+            transition: 0.3s
+          &.soon
+            position: relative
+            &:after
+              content: 'coming soon'
+              position: absolute
+              right: -397px
+              top: -20px
+              color: #ecbd2b
+              text-transform: uppercase
+              text-align: center
+              padding: 7px 31px
+              font-size: 48px
+              display: block
+              font-weight: normal
+              line-height: 1
+              background-color: #000000
+              clip-path: polygon(6% 0, 100% 0, 94% 100%, 0% 100%)
+  .top-line-navbar
+    width: 100%
+    ul
+      justify-content: flex-end
+  .top-line-contacts,
+  .top-line-page
+    display: none
