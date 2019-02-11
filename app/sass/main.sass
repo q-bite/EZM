@@ -460,3 +460,43 @@ form
   .top-line-contacts,
   .top-line-page
     display: none
+
+.gallery-block-wrap
+  display: flex
+  justify-content: space-around
+.gallery-logo-wrap
+  display: flex
+  align-items: flex-end
+  padding-right: 60px
+  p
+    font-size: 30px
+    color: #fff
+    line-height: 1.3
+    img
+      display: inline-block
+      position: relative
+      top: 7px
+      margin-left: 5px
+.gallery-row
+  img
+    display: block
+    width: 100%
+    filter: grayscale(100%)
+    box-sizing: border-box
+    transition: all 0.5s ease-out
+    &:hover
+      filter: grayscale(0%)
+      transition: 0.3s
+      box-sizing: border-box
+      transform: scale(1.1)
+      position: relative
+      z-index: 2
+.popup-gallery
+  display: flex
+  > div
+    width: 25%
+.gallery-logo-ezm
+  padding-top: 30px
+  img
+    display: block
+    max-width: 100%
