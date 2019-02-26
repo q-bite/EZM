@@ -1,10 +1,50 @@
 /* mobile NAV */
 $(document).ready(function() {
 
+    /* Pages active */
+    $('a[href="#home"]').on('click', function(e){
+        e.preventDefault();
+        $('.block-hidden-window').removeClass('active');
+        $('.window-home').addClass('active');
+        $('.top-line-page h2').text('');
+    });
+    $('a[href="#about"]').on('click', function(e){
+        e.preventDefault();
+        $('.block-hidden-window').removeClass('active');
+        $('.window-about').addClass('active');
+        $('.top-line-page h2').text('About Us');
+    });
+    $('a[href="#gallery"]').on('click', function(e){
+        e.preventDefault();
+        $('.block-hidden-window').removeClass('active');
+        $('.window-gallery').addClass('active');
+        $('.top-line-page h2').text('Gallery');
+    });
+    $('a[href="#services"]').on('click', function(e){
+        e.preventDefault();
+        $('.block-hidden-window').removeClass('active');
+        $('.window-services').addClass('active');
+        $('.top-line-page h2').text('Services');
+    });
+    $('a[href="#contact"]').on('click', function(e){
+        e.preventDefault();
+        $('.block-hidden-window').removeClass('active');
+        $('.window-contact').addClass('active');
+        $('.top-line-page h2').text('Contact Us');
+    });
+
+    /* Btn Open Nav */
 	$('a[href="#nav"]').on('click', function(e){
         e.preventDefault();
         $('.contain-window').toggleClass('nav-active');
     })
+    $('.main-nav a').on('click', function(e){
+        e.preventDefault();
+        $('.main-nav a').removeClass('active');
+        $(this).addClass('active');
+        $('.contain-window').toggleClass('nav-active');
+    })
+
 
 });
 
