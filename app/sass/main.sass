@@ -3,6 +3,7 @@
 *
   margin: 0
   padding: 0
+  box-sizing: border-box
 
 ::placeholder
   color: #6c6c6c
@@ -39,11 +40,11 @@ body
 .contain
   &-window
     box-sizing: border-box
-    min-height: 100vh
+    //min-height: 100vh
     position: relative
     background-color: #0a0603
-    &.home-window
-      height: 100vh
+    //&.home-window
+    //  height: 100vh
   &-bg
     height: inherit
     padding: 0 50px
@@ -407,9 +408,10 @@ form
   display: none
 .nav-active
   position: relative
+  overflow: hidden
   &:before
     content: ''
-    left: 0
+    left: 0px
     right: 0
     top: 0
     bottom: 0
@@ -438,7 +440,7 @@ form
   .main-nav
     position: absolute
     top: 0
-    left: 0
+    left: 15px
     z-index: 3
     padding-top: 130px
     ul
@@ -532,10 +534,11 @@ form
       padding-left: 50px
       padding-right: 50px
 
-.block-hidden-window
-  display: none
-  &.active
-    display: block
+//.block-hidden-window
+//  display: none
+//  &.active
+//    display: block
+//    box-sizing: border-box
 
 .top-line-contacts
   display: flex
@@ -549,3 +552,34 @@ form
 .top-line-page
   padding-right: 50px
 
+.down
+  background-color: #c1b749
+  position: fixed !important
+  right: 20px
+  bottom: 20px
+  cursor: pointer
+  -webkit-border-radius: 50%
+  border-radius: 50%
+  height: 60px
+  line-height: 60px
+  text-align: center
+  width: 60px
+  display: flex
+  align-items: center
+  justify-content: center
+  transition: 0.3s
+  padding: 0!important
+  &:hover
+    background-color: #ead91e
+    transition: 0.3s
+  a
+    text-decoration: none
+    color: #000
+    display: block
+  p
+    line-height: 1
+    font-size: 15px
+    padding-top: 5px
+  span
+    display: block
+    font-size: 10px
