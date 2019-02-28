@@ -23,7 +23,8 @@ body
   position: relative
   line-height: 1.65
   font-family: $roboto-font
-  overflow-x: hidden
+  overflow: hidden
+
   color: $text
   background-color: #030200
   input, textarea
@@ -40,11 +41,11 @@ body
 .contain
   &-window
     box-sizing: border-box
-    //min-height: 100vh
+    min-height: 100vh
     position: relative
     background-color: #0a0603
-    //&.home-window
-    //  height: 100vh
+    &.home-window
+      height: 100vh
   &-bg
     height: inherit
     padding: 0 50px
@@ -249,16 +250,16 @@ ul
 .service-text
   p
     color: #fff
-    font-size: 22px
+    font-size: 20px
     line-height: 1.3
 
 .service
   &-title
     background-image: url("../img/services/serv-bg.png")
     background-repeat: no-repeat
-    background-position: 5px
+    background-position: right
     h3
-      font-size: 36px
+      font-size: 30px
       color: #000
       padding-left: 15px
   &-img
@@ -272,7 +273,7 @@ ul
       align-items: center
       justify-content: space-around
       > div
-        width: 31%
+        max-width: 360px
         padding: 0 15px
         box-sizing: border-box
 
@@ -517,8 +518,9 @@ form
       z-index: 2
 .popup-gallery
   display: flex
+  justify-content: center
   > div
-    width: 25%
+    width: 20%
 .gallery-logo-ezm
   padding-top: 30px
   img
@@ -534,11 +536,11 @@ form
       padding-left: 50px
       padding-right: 50px
 
-//.block-hidden-window
-//  display: none
-//  &.active
-//    display: block
-//    box-sizing: border-box
+.block-hidden-window
+  display: none
+  &.active
+    display: block
+    box-sizing: border-box
 
 .top-line-contacts
   display: flex
